@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Loader from "../components/Loader";
 import PostCard from "../components/PostCard";
+import UserCard from "../components/UserCard";
+
 
 function Home() {
   const [posts, setPosts] = useState([]);
@@ -51,6 +53,12 @@ function Home() {
           <PostCard key={post.id} post={post} author={getAuthorName(post.userId)} />
         ))}
       </div>
+        <h2 className="text-2xl font-semibold mt-10 mb-4 text-purple-700">Users</h2>
+<div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+  {users.map((user) => (
+    <UserCard key={user.id} user={user} />
+  ))}
+</div>
 
       <div className="flex justify-center mt-6 space-x-4">
         <button
