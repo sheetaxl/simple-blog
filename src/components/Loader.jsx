@@ -1,9 +1,9 @@
-function Loader() {
+const Loader = () => {
   return (
-    <div className="text-center py-20 text-blue-600 text-xl font-semibold animate-pulse">
+    <div className="text-center text-gray-600 py-10 text-lg">
       Loading...
     </div>
   );
-}
+};
 
 export default Loader;
